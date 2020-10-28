@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<!-- This file does not need to be edited unless you want to -->
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>DOM Methodology</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&family=Walter+Turncoat&display=swap" rel="stylesheet">
+    <script src = "scripts.js"></script>
+</head>
+
+<body>
+	
+	<header id="header">
+		<h1 id="page-title">DOM Methodology</h1>
+		<h2 id="tagline">how to decide which methods to use</h3>
+	</header>
+
+	<main> 
+        
+        <section>
+			<h3>Test it out!</h3>
+			<div class="method-group">
+				<h4>.getElementById()</h4>
+				<div class="button-group">
+					<button id="specific-button">GET BY ID</button>
+					<p>The listener for this button uses <strong>.getElementById("specific-button")</strong> to identify a specific box and change its color.</p>
+				</div>
+			</div>
+			<div class="method-group">
+				<h4>.querySelector()</h4>
+				<div class="button-group">
+					<button id="h4-button">QUERY BY SELECTOR</button>
+					<p>The listener for this button uses <strong>.querySelector("h4")</strong> to identify the h4 elements in the entire document and change their font family.</p>
+				</div>
+				<div class="button-group">
+					<button id="center-button">QUERY BY ID</button>
+					<p>The listener for this button uses <strong>.querySelector([id="center-box"])</strong> to identify a specific box and change its color.</p>
+				</div>
+				<div class="button-group">
+					<button id="row0-button">QUERY BY CLASS</button>
+					<p>The listener for this button uses <strong>.querySelector([class="row0"])</strong> to identify any boxes with the class "row0" and change their color.</p>
+				</div>
+			</div>
+			<div class="method-group">
+				<h4>.getElementsbyClass</h4>
+				<div class="button-group">
+					<button id="column3-button">GET ALL BY CLASS</button>
+					<p>The listener for this button uses <strong>.getElementsbyClass("column3")</strong> to identify any boxes with the class "column3" and puts them in an array. The array is then looped through and each element's color is changed.</p>
+				</div>
+            </div>
+        </section>
+
+        <section>
+			<h3>See results below:</h3>
+			<div id="box-grid">
+				<div class="box-row">
+					<div class="box row0 column0"></div>
+					<div class="box row0 column1"></div>
+					<div class="box row0 column2"></div>
+					<div class="box row0 column3"></div>
+					<div class="box row0 column4"></div>
+				</div>
+				<div class="box-row">
+					<div class="box row1 column0"></div>
+					<div class="box row1 column1" id="specific-element"></div>
+					<div class="box row1 column2"></div>
+					<div class="box row1 column3"></div>
+					<div class="box row1 column4"></div>
+				</div>
+				<div class="box-row">
+					<div class="box row2 column0"></div>
+					<div class="box row2 column1"></div>
+					<div class="box row2 column2" id="center-box"></div>
+					<div class="box row2 column3"></div>
+					<div class="box row2 column4"></div>
+				</div>
+				<div class="box-row">
+					<div class="box row3 column0"></div>
+					<div class="box row3 column1"></div>
+					<div class="box row3 column2"></div>
+					<div class="box row3 column3"></div>
+					<div class="box row3 column4"></div>
+				</div>
+				<div class="box-row">
+					<div class="box row4 column0"></div>
+					<div class="box row4 column1"></div>
+					<div class="box row4 column2"></div>
+					<div class="box row4 column3"></div>
+					<div class="box row4 column4"></div>
+				</div>
+			</div>
+		</section>
+		
+
+
+    </main>
+    
+</body>
+
+</html>
