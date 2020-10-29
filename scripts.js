@@ -30,13 +30,23 @@ function init() {
     
 
     // Now let's create objects for all the elements on the right side of the page that will be affected when the user hovers over those buttons
+    // ...using .getElementById
     let specificBox = document.getElementById("specific-box");
+    // ...using .getElementsByClassName
     let column3Boxes = document.getElementsByClassName("column3");
     let allBoxes = document.getElementsByClassName("box");
+    // ...using .querySelector and .querySelectorAll
     let h3Element = document.querySelector("h3");
     let h3Elements = document.querySelectorAll("h3");
     let centerBox = document.querySelector("#center-box"); // notice the octothorpe (hash symbol)
     let row0Boxes = document.querySelectorAll(".row0"); // notice the period
+
+    /*
+        The main difference between the 'get element by' methods and the 'query selector' methods is this:
+            - .getElementsByClassName() will get a fresh representation of all objects in the document, even new ones that were added since the object was created.
+            - .querySelectorAll() is static and will only ever return the array of elements that it found the first time it was instantiated. 
+        So if you use .querySelectorAll, make sure you instantiate the object inside the listener so it's fresh!
+    */
 
     /** EVENT HANDLERS **/
 
