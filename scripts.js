@@ -16,127 +16,109 @@ function init() {
     /** NON-OBJECT VARIABLES **/
 
     let baseColor = "rgb(34, 34, 34)";
-    let altColor = "rgb(156, 10, 63)";
-
 
     /** OBJECTS **/
 
-    const clickButton = document.getElementById("click");
-    const doubleClickButton = document.getElementById("double-click");
-    const passOverButton = document.getElementById("over-and-out");
-    const andMeButton = document.getElementById("and-me");
-    const pressDownButton = document.getElementById("down-and-up");
+    // First, let's create objects for all the buttons on the left side of the page
+    const specificButton = document.getElementById("specific-button");
+    const column3Button = document.getElementById("column3-button");
+    const allBoxesButton = document.getElementById("all-boxes-button");
+    const h3Button = document.getElementById("h3-button");
+    const h3AllButton = document.getElementById("h3-all-button")
+    const centerButton = document.getElementById("center-button");
+    const row0Button = document.getElementById("row0-button");
+    
 
-    /** PRE-SET STYLES **/
-    /* The DOM can't read your style sheet, so IF your handlers depend on reading the current color of an element from the page, you have to set it here first. If your handler needs only to change the color, but not read it, this is not necessary. For the click and double-click handlers, we need it to be able to tell what color it is in order to evaluate the conditionals and toggle between one color and another. */
-    clickButton.style.backgroundColor = baseColor;
-    doubleClickButton.style.backgroundColor = baseColor;
+    // Now let's create objects for all the elements on the right side of the page that will be affected when the user hovers over those buttons
+    let specificBox = document.getElementById("specific-box");
+    let column3Boxes = document.getElementsByClassName("column3");
+    let allBoxes = document.getElementsByClassName("box");
+    let h3Element = document.querySelector("h3");
+    let h3Elements = document.querySelectorAll("h3");
+    let centerBox = document.querySelector("#center-box"); // notice the octothorpe (hash symbol)
+    let row0Boxes = document.querySelectorAll(".row0"); // notice the period
 
     /** EVENT HANDLERS **/
 
-    // When the "click me" button is clicked
-    clickButton.addEventListener("click", function() {
-        let currentColor = clickButton.style.backgroundColor;
-        if (currentColor === baseColor) {
-            clickButton.style.backgroundColor = altColor;
-        } else {
-            clickButton.style.backgroundColor = baseColor;
-        }
+    // When the user hovers over the "GET BY ID" button
+    specificButton.addEventListener("mouseover", function() {
+        specificBox.style.backgroundColor = "rgb(160, 17, 17)";
+    });
+    specificButton.addEventListener("mouseout", function() {
+        specificBox.style.backgroundColor = baseColor;
     });
 
-    // When the "double-click me" button is double-clicked
-    doubleClickButton.addEventListener("dblclick", function() {
-        let currentColor = doubleClickButton.style.backgroundColor;
-        if (currentColor === baseColor) {
-            doubleClickButton.style.backgroundColor = altColor;
-        } else {
-            doubleClickButton.style.backgroundColor = baseColor;
-        }
+    // When the user hovers over the orange "GET ALL BY CLASS" button
+    column3Button.addEventListener("mouseover", function() {
+        for (let i=0; i < column3Boxes.length; i++) {
+            column3Boxes[i].style.backgroundColor = "rgb(206, 79, 6)";
+        }  
+    });
+    column3Button.addEventListener("mouseout", function() {
+        for (let i=0; i < column3Boxes.length; i++) {
+            column3Boxes[i].style.backgroundColor = baseColor;
+        } 
     });
 
-    // When the mouse first passes *onto* the "pass over me" button
-    passOverButton.addEventListener("mouseover", function() {
-        passOverButton.style.backgroundColor = altColor;
+    // When the user hovers over the yellow "GET ALL BY CLASS" button
+    allBoxesButton.addEventListener("mouseover", function() {
+        for (let i=0; i < allBoxes.length; i++) {
+            allBoxes[i].style.backgroundColor = "rgb(224, 194, 22)";
+        }  
+    });
+    allBoxesButton.addEventListener("mouseout", function() {
+        for (let i=0; i < allBoxes.length; i++) {
+            allBoxes[i].style.backgroundColor = baseColor;
+        } 
     });
 
-    // When the mouse passes *off of* the "pass over me" button
-    passOverButton.addEventListener("mouseout", function() {
-        passOverButton.style.backgroundColor = baseColor;
+    // When the user hovers over the green "QUERY ONE" button
+    h3Button.addEventListener("mouseover", function() {
+        h3Element.style.color = "rgb(91, 153, 9)";
+        h3Element.style.fontFamily = "'Architects Daughter', serif";
+        h3Element.style.marginBottom= "-8px 0px"; // to keep grid from jumping around
+    });
+    h3Button.addEventListener("mouseout", function() {
+        h3Element.style.color = baseColor;
+        h3Element.style.fontFamily = "'Walter Turncoat', sans-serif";
+        h3Element.style.margin= "0px";
     });
 
-    // When the mouse first passes *onto* the "and me" button
-    andMeButton.addEventListener("mouseover", function() {
-        passOverButton.style.backgroundColor = altColor;
-        andMeButton.style.backgroundColor = altColor;
+    // When the user hovers over the blue "QUERY ALL" button
+    h3AllButton.addEventListener("mouseover", function() {
+        for (let i=0; i < h3Elements.length; i++) {
+            h3Elements[i].style.color = "rgb(18, 91, 175)";
+            h3Elements[i].style.fontFamily = "'Architects Daughter', serif";
+            h3Elements[i].style.marginBottom = "-8px 0px"; // to keep grid from jumping around
+        }  
+    });
+    h3AllButton.addEventListener("mouseout", function() {
+        for (let i=0; i < h3Elements.length; i++) {
+            h3Elements[i].style.color = baseColor;
+            h3Elements[i].style.fontFamily = "'Walter Turncoat', sans-serif";
+            h3Elements[i].style.margin= "0px";
+        } 
     });
 
-    // When the mouse passes *off of* the "and me" button
-    andMeButton.addEventListener("mouseout", function() {
-        andMeButton.style.backgroundColor = baseColor;
-        passOverButton.style.backgroundColor = baseColor;
+    // When the user hovers over the purple "QUERY BY ID" button
+    centerButton.addEventListener("mouseover", function() {
+        centerBox.style.backgroundColor = "rgb(126, 11, 172)";
+    });
+    centerButton.addEventListener("mouseout", function() {
+        centerBox.style.backgroundColor = baseColor;
     });
 
-    // When the mouse presses down on the "hold me down" button
-     pressDownButton.addEventListener("mousedown", function() {
-        pressDownButton.style.backgroundColor = altColor;
+    // When the user hovers over the pink "QUERY BY CLASS" button
+    row0Button.addEventListener("mouseover", function() {
+        for (let i=0; i < column3Boxes.length; i++) {
+            row0Boxes[i].style.backgroundColor = "rgb(172, 11, 132)";
+        }  
+    });
+    row0Button.addEventListener("mouseout", function() {
+        for (let i=0; i < column3Boxes.length; i++) {
+            row0Boxes[i].style.backgroundColor = baseColor;
+        } 
     });
 
-    // When the mouse presses down on the "hold me down" button
-    pressDownButton.addEventListener("mouseup", function() {
-        pressDownButton.style.backgroundColor = baseColor;
-    });
-
-
-    /** BONUS: MOUSEMOVE WITH A CANVAS ELEMENT **/
-
-    let isDrawing = false;
-    let x = 0;
-    let y = 0;
-
-    const canvas = document.getElementById('canvas');
-    const context = canvas.getContext('2d');
-    const clearCanvas = document.getElementById('clear');
-
-    // When the user presses down with the mouse
-    canvas.addEventListener('mousedown', e => {
-    x = e.offsetX;
-    y = e.offsetY;
-    isDrawing = true;
-    });
-
-    // When the user moves the mouse after pressing down
-    canvas.addEventListener('mousemove', e => {
-    if (isDrawing === true) {
-        drawLine(context, x, y, e.offsetX, e.offsetY);
-        x = e.offsetX;
-        y = e.offsetY;
-    }
-    });
-
-    // When the user releases the mouse
-    window.addEventListener('mouseup', e => {
-    if (isDrawing === true) {
-        drawLine(context, x, y, e.offsetX, e.offsetY);
-        x = 0;
-        y = 0;
-        isDrawing = false;
-    }
-    });
-
-    // When the user presses the "clear canvas" button
-    clearCanvas.addEventListener('click', e => {
-        context.clearRect(0, 0, canvas.width, canvas.height);
-    });
-
-    // Needed for mousemove handler above
-    function drawLine(context, x1, y1, x2, y2) {
-        context.beginPath();
-        context.strokeStyle = 'black';
-        context.lineWidth = 2;
-        context.moveTo(x1, y1);
-        context.lineTo(x2, y2);
-        context.stroke();
-        context.closePath();
-    }
 
 }
