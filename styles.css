@@ -1,223 +1,202 @@
-/**** CASCADING STYLE SHEET ****/
-
 /*
     This sheet does not need to be edited unless you want to.
 */
 
-/**** Defaults for standard elements ****/
-
 html {
-    font-size: 14px;
+	font-size: 18px;
 }
 
 body {
 	background-color: white;
 	font-family: 'Ubuntu', sans-serif;
-	font-size: 1rem;  /* equal to html default */
 	font-weight: 400;
-	color: #222; 
-	width: 100vw;
-	height: 100vh;
-	margin: 0px;
-	padding: 0px;
-    overflow-x: hidden; 
-    box-sizing: border-box;
+	color: #222;
+	margin: 0;
+	min-height: 100vh;
+	padding: 0;
+	overflow-x: hidden;
+	box-sizing: border-box;
 }
 
 header {
 	background-color: #222;
-    height: 120px;
-    padding: 20px 120px;
-    box-sizing: border-box;
+	height: 120px;
+	padding: 20px 120px;
+	box-sizing: border-box;
 }
 
 main {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 	width: 100%;
-    padding: 0px 120px 30px; /* top padding buffered by section margins */
-    box-sizing: border-box;
+	padding: 0 120px 30px;
+	box-sizing: border-box;
 }
 
 section {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    margin: 0px 0px 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	margin: 0 0 30px;
 }
 
-div {
-    position: relative;
-	margin: 0px;
-	padding: 0px;
+h1 {
+	font-family: 'Walter Turncoat', cursive;
+	font-size: 2rem;
 }
 
-h1 { 
-    font-family: 'Walter Turncoat', cursive;
-	font-size: 2.5rem;
-}
-
-h2 { 
+h2 {
 	font-size: 1rem;
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+	font-weight: 300;
+	letter-spacing: 2px;
+	text-transform: uppercase;
 }
 
 h3 {
-    font-family: 'Walter Turncoat', cursive;
-    font-size: 2rem;
-    text-align: center;
-    margin: 0px; 
+	font-family: 'Walter Turncoat', cursive;
+	font-size: 1.5rem;
+	text-align: center;
+	margin: 0;
 }
 
 h4 {
-    font-size: 1.3rem;
-    font-weight: 700px;
-    margin: 0px;
+	font-size: 1.2rem;
+	font-weight: 700;
+	margin: 0;
 }
 
 p {
-    margin: .5rem 0px; 
+	margin: 0.5rem 0;
 }
 
 button {
-    height: 2rem;
-    width: 240px;
-    padding: 0.2rem 1rem;
-    color: white;
-    font-family: 'Walter Turncoat', cursive;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    background-color: #222;
-    border: none;
-    border-radius: 4px;
-    margin: 20px 0px 0px;
+	height: 2rem;
+	width: 100%;
+	padding: 0.2rem 1rem;
+	color: white;
+	font-family: 'Walter Turncoat', cursive;
+	font-size: 1rem;
+	text-transform: uppercase;
+	background-color: #222;
+	border: none;
+	border-radius: 4px;
+	margin: 20px 0 0;
 }
 
 button:hover {
-    /* cursor: pointer; */
-    opacity: 0.85;
+	opacity: 0.85;
 }
 
 button:focus {
-    outline: 0;
+	outline: 0;
 }
-
-
-/**** IDs for specific elements ****/
 
 #page-title {
 	color: white;
 	text-align: center;
-	margin: 0px 0px 10px;  
+	margin: 0 0 10px;
 }
 
 #tagline {
-    color: white;
+	color: white;
 	text-align: center;
-	margin: 0px;  
+	margin: 0;
 }
 
 #box-grid {
-    display: flex;
-    flex-direction: column;
-    height: 250px;
-    width: 250px;
-    margin: 20px 0px;
+	display: flex;
+	flex-direction: column;
+	height: 250px;
+	width: 250px;
+	margin: 20px 0px;
 }
 
-#specific-button {
-    background-color: rgb(160, 17, 17);
+#specific-box-button {
+	background-color: rgb(160, 17, 17);
 }
 
 #column3-button {
-    background-color: rgb(206, 79, 6);
+	background-color: rgb(206, 79, 6);
 }
 
 #all-boxes-button {
-    background-color: rgb(224, 194, 22);
+	background-color: rgb(224, 194, 22);
 }
 
 #h3-button {
-    background-color: rgb(91, 153, 9);
+	background-color: rgb(91, 153, 9);
 }
 
 #h3-all-button {
-    background-color: rgb(18, 91, 175);
+	background-color: rgb(18, 91, 175);
 }
 
 #center-button {
-    background-color: rgb(126, 11, 172);
+	background-color: rgb(126, 11, 172);
 }
 
 #row0-button {
-    background-color: rgb(172, 11, 132);
+	background-color: rgb(172, 11, 132);
 }
 
-
-
-/**** Classes for custom styles ****/
-
 .button-section {
-    padding: 25px 30px 0px;
+	padding: 25px 30px 0;
 }
 
 .method-group {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 240px;
-    margin: 0px 0px 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 360px;
+	margin: 0 0 40px;
 }
 
 .button-group {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .explanation {
-    font-size: 0.9rem;
-    text-align: justify;
+	font-size: 0.9rem;
+	text-align: justify;
 }
 
 .box-section {
-    width: 290px;
-    padding: 20px 30px;
-    box-sizing: border-box;
+	width: 290px;
+	padding: 20px 30px;
+	box-sizing: border-box;
 }
 
 .box-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: 250px;
-    margin: 0px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	width: 250px;
+	margin: 0;
 }
 
 .box {
-    background-color: #222;
-    height: 40px;
-    width: 40px;
-    margin: 5px;
-    border: none;
-    border-radius: 4px;
+	background-color: #222;
+	height: 40px;
+	width: 40px;
+	margin: 5px;
+	border: none;
+	border-radius: 4px;
 }
 
 .container {
-    display: flex;
+	display: flex;
 }
 
 .row {
-    flex-direction: row;
+	flex-direction: row;
 }
 
 .column {
-    flex-direction: column;
+	flex-direction: column;
 }
 
 .centered {
-    justify-content: center; /* applies to flexbox only */
+	justify-content: center;
 }
-
