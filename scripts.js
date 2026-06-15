@@ -10,11 +10,11 @@ const BASE_COLOR = 'rgb(34, 34, 34)';
 const boxGrid = document.getElementById('box-grid');
 
 // Boxes inside grid generated dynamically
-for (let row = 0; row < 5; row++) {
+for (const row = 0; row < 5; row++) {
 	const rowElement = document.createElement('div');
 	rowElement.className = 'box-row';
 
-	for (let column = 0; column < 5; column++) {
+	for (const column = 0; column < 5; column++) {
 		const box = document.createElement('div');
 		box.className = `box row${row} column${column}`;
 		rowElement.appendChild(box);
@@ -42,15 +42,15 @@ const h3AllButton = document.getElementById('h3-all-button');
 // the elements to be manipulated
 
 // ...using .getElementById
-let specificBox = document.getElementById('specific-box'); // NO hash symbol
+const specificBox = document.getElementById('specific-box'); // NO hash symbol
 
 // ...using .getElementsByClassName
-let column3Boxes = document.getElementsByClassName('column3'); // NO period
-let allBoxes = document.getElementsByClassName('box');
+const column3Boxes = document.getElementsByClassName('column3'); // NO period
+const allBoxes = document.getElementsByClassName('box');
 
 // ...using .querySelector and .querySelectorAll
-let h3Element = document.querySelector('h3');
-let h3Elements = document.querySelectorAll('h3');
+const h3Element = document.querySelector('h3');
+const h3Elements = document.querySelectorAll('h3');
 // TODO: Create an object to represent the element with the id "center-box"
 // TODO: Create a list of objects to represent all elements with the class "row0"
 
