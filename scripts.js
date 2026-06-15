@@ -42,17 +42,17 @@ const row0Button = document.getElementById('row0-button');
 // the elements to be manipulated
 
 // ...using .getElementById
-let specificBox = document.getElementById('specific-box'); // NO hash symbol
+const specificBox = document.getElementById('specific-box'); // NO hash symbol
 
 // ...using .getElementsByClassName
-let column3Boxes = document.getElementsByClassName('column3'); // NO period
-let allBoxes = document.getElementsByClassName('box');
+const column3Boxes = document.getElementsByClassName('column3'); // NO period
+const allBoxes = document.getElementsByClassName('box');
 
 // ...using .querySelector and .querySelectorAll
-let h3Element = document.querySelector('h3');
-let h3Elements = document.querySelectorAll('h3');
-let centerBox = document.querySelector('#center-box'); // hash symbol for id
-let row0Boxes = document.querySelectorAll('.row0'); // period for class
+const h3Element = document.querySelector('h3');
+const h3Elements = document.querySelectorAll('h3');
+const centerBox = document.querySelector('#center-box'); // hash symbol for id
+const row0Boxes = document.querySelectorAll('.row0'); // period for class
 
 /*
     The main difference between the 'get element by' methods 
