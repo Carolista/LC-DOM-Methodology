@@ -29,6 +29,7 @@ document.querySelector('.row2.column2').id = 'center-box';
 
 /** CREATE OBJECTS THAT REPRESENT HTML ELEMENTS **/
 
+// Buttons user will interact with
 // DEMO: Create an object to represent the element with id "specific-box-button"
 // DEMO: Create an object to represent the element with id "column3-button"
 // DEMO: Create an object to represent the element with id "all-boxes-button"
