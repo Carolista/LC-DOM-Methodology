@@ -35,8 +35,8 @@ const column3Button = document.getElementById('column3-button');
 const allBoxesButton = document.getElementById('all-boxes-button');
 const h3Button = document.getElementById('h3-button');
 const h3AllButton = document.getElementById('h3-all-button');
-const centerButton = document.getElementById('center-button');
-const row0Button = document.getElementById('row0-button');
+// TODO: Create an object to represent the element with id "center-button"
+// TODO: Create an object to represent the element with id "row0-button"
 
 // Follow the directions on the page to create objects for all
 // the elements to be manipulated
@@ -51,8 +51,8 @@ let allBoxes = document.getElementsByClassName('box');
 // ...using .querySelector and .querySelectorAll
 let h3Element = document.querySelector('h3');
 let h3Elements = document.querySelectorAll('h3');
-let centerBox = document.querySelector('#center-box'); // hash symbol for id
-let row0Boxes = document.querySelectorAll('.row0'); // period for class
+// TODO: Create an object to represent the element with the id "center-box"
+// TODO: Create a list of objects to represent all elements with the class "row0"
 
 /*
     The main difference between the 'get element by' methods 
@@ -126,22 +126,8 @@ h3AllButton.addEventListener('mouseup', () => {
 	}
 });
 
-// When the user hovers over the purple "QUERY BY ID" button
-centerButton.addEventListener('mousedown', () => {
-	centerBox.style.backgroundColor = 'rgb(126, 11, 172)';
-});
-centerButton.addEventListener('mouseup', () => {
-	centerBox.style.backgroundColor = BASE_COLOR;
-});
+// TODO: Change the color of the box with the "center-box" id to match
+// the purple "QUERY BY ID" button, and make sure it changes back
 
-// When the user hovers over the pink "QUERY ALL BY CLASS" button
-row0Button.addEventListener('mousedown', () => {
-	for (box of row0Boxes) {
-		box.style.backgroundColor = 'rgb(172, 11, 132)';
-	}
-});
-row0Button.addEventListener('mouseup', () => {
-	for (box of row0Boxes) {
-		box.style.backgroundColor = BASE_COLOR;
-	}
-});
+// TODO: Change the color of all boxes in row0 to match the pink 
+// "QUERY ALL BY CLASS" button, and make sure they change back
