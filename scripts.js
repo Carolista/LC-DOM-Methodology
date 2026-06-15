@@ -29,7 +29,7 @@ document.querySelector('.row2.column2').id = 'center-box';
 
 /** CREATE OBJECTS THAT REPRESENT HTML ELEMENTS **/
 
-// 
+// Buttons user will interact with
 const specificBoxButton = document.getElementById('specific-box-button');
 const column3Button = document.getElementById('column3-button');
 const allBoxesButton = document.getElementById('all-boxes-button');
@@ -70,7 +70,7 @@ let row0Boxes = document.querySelectorAll('.row0'); // period for class
 
 /** EVENT HANDLERS **/
 
-// When the user hovers over the "GET BY ID" button
+// When the user presses on the "GET BY ID" button
 specificBoxButton.addEventListener('mousedown', () => {
 	specificBox.style.backgroundColor = 'rgb(160, 17, 17)';
 });
@@ -78,7 +78,7 @@ specificBoxButton.addEventListener('mouseup', () => {
 	specificBox.style.backgroundColor = BASE_COLOR;
 });
 
-// When the user hovers over the orange "GET ALL BY CLASS" button
+// When the user presses on the orange "GET ALL BY CLASS" button
 column3Button.addEventListener('mousedown', () => {
 	for (box of column3Boxes) {
 		box.style.backgroundColor = 'rgb(206, 79, 6)';
@@ -90,7 +90,7 @@ column3Button.addEventListener('mouseup', () => {
 	}
 });
 
-// When the user hovers over the yellow "GET ALL BY CLASS" button
+// When the user presses on the yellow "GET ALL BY CLASS" button
 allBoxesButton.addEventListener('mousedown', () => {
 	for (box of allBoxes) {
 		box.style.backgroundColor = 'rgb(224, 194, 22)';
@@ -102,7 +102,7 @@ allBoxesButton.addEventListener('mouseup', () => {
 	}
 });
 
-// When the user hovers over the green "QUERY BY TAG" button
+// When the user presses on the green "QUERY BY TAG" button
 h3Button.addEventListener('mousedown', () => {
 	h3Element.style.color = 'rgb(91, 153, 9)';
 	h3Element.style.fontFamily = "'Architects Daughter', serif";
@@ -112,7 +112,7 @@ h3Button.addEventListener('mouseup', () => {
 	h3Element.style.fontFamily = "'Walter Turncoat', sans-serif";
 });
 
-// When the user hovers over the blue "QUERY ALL BY TAG" button
+// When the user presses on the blue "QUERY ALL BY TAG" button
 h3AllButton.addEventListener('mousedown', () => {
 	for (element of h3Elements) {
 		element.style.color = 'rgb(18, 91, 175)';
@@ -126,7 +126,7 @@ h3AllButton.addEventListener('mouseup', () => {
 	}
 });
 
-// When the user hovers over the purple "QUERY BY ID" button
+// When the user presses on the purple "QUERY BY ID" button
 centerButton.addEventListener('mousedown', () => {
 	centerBox.style.backgroundColor = 'rgb(126, 11, 172)';
 });
@@ -134,7 +134,7 @@ centerButton.addEventListener('mouseup', () => {
 	centerBox.style.backgroundColor = BASE_COLOR;
 });
 
-// When the user hovers over the pink "QUERY ALL BY CLASS" button
+// When the user presses on the pink "QUERY ALL BY CLASS" button
 row0Button.addEventListener('mousedown', () => {
 	for (box of row0Boxes) {
 		box.style.backgroundColor = 'rgb(172, 11, 132)';
