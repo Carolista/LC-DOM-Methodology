@@ -29,7 +29,7 @@ document.querySelector('.row2.column2').id = 'center-box';
 
 /** CREATE OBJECTS THAT REPRESENT HTML ELEMENTS **/
 
-// 
+// Buttons user will interact with
 const specificBoxButton = document.getElementById('specific-box-button');
 const column3Button = document.getElementById('column3-button');
 const allBoxesButton = document.getElementById('all-boxes-button');
