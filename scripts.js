@@ -54,20 +54,6 @@ let h3Elements = document.querySelectorAll('h3');
 // TODO: Create an object to represent the element with the id "center-box"
 // TODO: Create a list of objects to represent all elements with the class "row0"
 
-/*
-    The main difference between the 'get element by' methods 
-    and the 'query selector' methods is this:
-        - .getElementsByClassName() will get a fresh representation 
-        of all objects in the document, even new ones that were added 
-        since the object was created.
-        - .querySelectorAll() is static and will only ever return the 
-        array of elements that it found the first time it was instantiated. 
-
-    So if you use .querySelectorAll in a situation where new elements may 
-    have been created, make sure you cache the object inside the 
-    listener so it's fresh!
-*/
-
 /** EVENT HANDLERS **/
 
 // When the user presses on the "GET BY ID" button
